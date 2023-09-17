@@ -1,0 +1,87 @@
+h2, p{
+  padding: 0;
+  margin: 0;
+}
+
+.App{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+input{
+    border: none;
+    outline: none;
+    border-bottom: 1px solid gray;
+    padding: 1rem;
+    font-size: 1.5rem;
+}
+.cardList{
+    display: flex;
+    flex: row;
+    flex-wrap: wrap;
+    max-width: 120rem;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+    
+    .card{
+        background-color: rgb(244, 244, 244);
+        border-radius: 2rem;
+        height: 25rem;
+        width: 20rem;
+        transition: 0.2s all;
+        &:hover{
+            box-shadow: 5px 5px 5px rgba(185, 184, 184, 0.5);
+            transform: scale(1.03);
+        }
+        .top{
+            height: 70%;
+            width: 100%;
+            img{
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                border-radius: 2rem 2rem 0 0 ;
+            }
+        }
+        .bottom{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 1rem;
+        }
+    }
+}
+
+.loading{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+}
+
+.Scroll{
+    height: 77vh;
+    background-color: transparent;
+    margin-top: 4rem;
+    overflow-y: scroll;
+    &::-webkit-scrollbar{
+        display: none;
+    }
+}
+
+@media (max-width:250px ) {
+    input{
+        font-size: 1.2rem;
+        padding: 1rem 0.5rem;
+    }
+    .cardList{
+        .card{
+            width: 15rem;
+        }
+    }
+}
+
